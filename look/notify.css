@@ -1,0 +1,39 @@
+/* Jungey notifications: glass cards with a gold edge on hover. Template: $$ACCENT etc. come from palette.py. */
+
+#XfceNotifyWindow {
+  background-color: alpha($SURFACE, 0.95);
+  border: 1px solid alpha($TEXT, 0.08);
+  border-radius: 18px;
+  box-shadow: inset 0 1px alpha($TEXT, 0.04);
+  padding: 2px;
+}
+#XfceNotifyWindow:hover {
+  border-color: alpha($ACCENT, 0.5);
+}
+#XfceNotifyWindow label {
+  color: $TEXT;
+}
+#XfceNotifyWindow label#summary {
+  font-weight: 700;
+}
+#XfceNotifyWindow label#body {
+  color: $MUTED;
+}
+#XfceNotifyWindow button {
+  border-radius: 10px;
+  background-color: alpha($TEXT, 0.06);
+  border: none;
+  color: $TEXT;
+  transition: background-color 150ms ease;
+}
+#XfceNotifyWindow button:hover {
+  background-color: alpha($ACCENT_BG, 0.55);
+}
+#XfceNotifyWindow progressbar progress {
+  background-color: $ACCENT;
+  border-radius: 999px;
+}
+#XfceNotifyWindow progressbar trough {
+  background-color: alpha($TEXT, 0.08);
+  border-radius: 999px;
+}

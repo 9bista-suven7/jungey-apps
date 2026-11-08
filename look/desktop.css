@@ -1,0 +1,128 @@
+/* Jungey desktop: Start menu, macOS-style window buttons, Alt+Tab, softer menus. Template: $$ACCENT etc. come from palette.py. */
+
+/* The bottom bar is styled in user.css: it needs priority over the panel's own rules. */
+
+/* --- Start menu ------------------------------------------------------------- */
+
+#whiskermenu-window {
+  background-color: alpha($BASE, 0.97);
+  border: 1px solid alpha($TEXT, 0.08);
+  border-radius: 22px;
+  padding: 12px;
+}
+#whiskermenu-window entry {
+  border-radius: 999px;
+  padding: 7px 16px;
+  background-color: alpha($TEXT, 0.05);
+  border: 1px solid alpha($TEXT, 0.07);
+}
+#whiskermenu-window entry:focus {
+  border-color: alpha($ACCENT, 0.7);
+  box-shadow: 0 0 0 3px alpha($ACCENT_BG, 0.3);
+}
+#whiskermenu-window treeview,
+#whiskermenu-window iconview,
+#whiskermenu-window scrolledwindow,
+#whiskermenu-window viewport {
+  background-color: transparent;
+}
+#whiskermenu-window treeview:selected,
+#whiskermenu-window iconview:selected {
+  background-color: alpha($ACCENT_BG, 0.45);
+  border-radius: 10px;
+  color: #ffffff;
+}
+#whiskermenu-window button {
+  border-radius: 10px;
+  transition: background-color 160ms ease;
+}
+#whiskermenu-window button:checked {
+  background-color: alpha($ACCENT, 0.16);
+  color: $ACCENT_HI;
+}
+
+/* --- window buttons in apps that draw their own title bar (macOS style) ----- */
+
+headerbar button.titlebutton,
+.titlebar button.titlebutton {
+  min-width: 14px;
+  min-height: 14px;
+  padding: 0;
+  margin: 0 4px;
+  border: none;
+  border-radius: 999px;
+  color: transparent;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.35);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0) 60%);
+  transition: color 120ms ease;
+}
+headerbar button.titlebutton.close,
+.titlebar button.titlebutton.close { background-color: $CLOSE; }
+headerbar button.titlebutton.minimize,
+.titlebar button.titlebutton.minimize { background-color: $MINIMIZE; }
+headerbar button.titlebutton.maximize,
+.titlebar button.titlebutton.maximize { background-color: $MAXIMIZE; }
+headerbar:hover button.titlebutton,
+.titlebar:hover button.titlebutton {
+  color: rgba(0, 0, 0, 0.62);
+}
+headerbar:backdrop button.titlebutton,
+.titlebar:backdrop button.titlebutton {
+  background-color: #24414d;
+  background-image: none;
+}
+
+/* --- everywhere: softer and smoother ------------------------------------------ */
+
+tooltip,
+tooltip.background {
+  border-radius: 10px;
+  background-color: alpha($RAISED, 0.97);
+  border: 1px solid alpha($TEXT, 0.07);
+}
+menu,
+.menu,
+.context-menu {
+  border-radius: 14px;
+  padding: 6px;
+}
+menu menuitem,
+.menu menuitem {
+  border-radius: 8px;
+  transition: background-color 120ms ease;
+}
+menu menuitem:hover {
+  background-color: alpha($ACCENT_BG, 0.4);
+}
+
+/* --- Alt+Tab: big live previews on glass ---------------------------------------- */
+
+#xfwm-tabwin {
+  background-color: alpha($BASE, 0.93);
+  border: 1px solid alpha($TEXT, 0.08);
+  border-radius: 24px;
+  padding: 16px;
+  -XfwmTabwinWidget-icon-size: 56;
+  -XfwmTabwinWidget-preview-size: 220;
+  -XfwmTabwinWidget-border-radius: 24;
+  -XfwmTabwinWidget-alpha: 0.93;
+}
+#xfwm-tabwin button {
+  border: none;
+  border-radius: 16px;
+  background: none;
+  box-shadow: none;
+  padding: 10px;
+  transition: background-color 120ms ease;
+}
+#xfwm-tabwin button:hover {
+  background-color: alpha($ACCENT, 0.1);
+}
+#xfwm-tabwin button:checked {
+  background-color: alpha($ACCENT_BG, 0.28);
+  box-shadow: inset 0 0 0 2px alpha($ACCENT, 0.7);
+}
+#xfwm-tabwin label {
+  color: $TEXT;
+  font-weight: 600;
+}

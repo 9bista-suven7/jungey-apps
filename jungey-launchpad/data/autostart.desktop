@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Jungey Launchpad
+Comment=Loads the Launchpad at login so it opens instantly
+Exec=@BIN@/jungey-launchpad --background
+OnlyShowIn=XFCE;
+X-GNOME-Autostart-enabled=true

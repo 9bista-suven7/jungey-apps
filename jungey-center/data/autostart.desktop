@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Jungey Center
+Comment=Loads Jungey Center at login so it opens instantly
+Exec=@BIN@/jungey-center --background
+OnlyShowIn=XFCE;
+X-GNOME-Autostart-enabled=true

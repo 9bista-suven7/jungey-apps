@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Jungey
+Comment=Jungey OS: navy and reactor cyan, built on Orchis
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Jungey
+MetacityTheme=Jungey
+IconTheme=Papirus-Dark
+CursorTheme=DMZ-White
+ButtonLayout=:minimize,maximize,close

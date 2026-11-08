@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Jungey Center
+Comment=Wi-Fi, Bluetooth, sound, brightness, battery and power
+Exec=@BIN@/jungey-center
+Icon=jungey-center
+Terminal=false
+NoDisplay=true

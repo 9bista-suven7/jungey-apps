@@ -1,0 +1,124 @@
+/* Jungey Center: a glass card above the bar. */
+
+window.jungey-center {
+  background: transparent;
+}
+.center-backdrop {
+  background: alpha(#000000, 0.12);
+}
+
+.center-card {
+  padding: 16px;
+  border-radius: 26px;
+  background: alpha(@dialog_bg_color, 0.94);
+  border: 1px solid alpha(#ffffff, 0.08);
+  box-shadow: 0 18px 50px alpha(#000000, 0.45), inset 0 1px alpha(#ffffff, 0.06);
+}
+
+.center-header {
+  padding: 4px 4px 6px;
+}
+.battery-percent {
+  font-size: 1.5em;
+  font-weight: 800;
+}
+
+.center-tile {
+  min-height: 58px;
+  padding: 8px 12px;
+  border-radius: 18px;
+  background: alpha(#ffffff, 0.06);
+  border: none;
+  box-shadow: none;
+  transition: background-color 160ms ease;
+}
+.center-tile:hover {
+  background: alpha(#ffffff, 0.1);
+}
+.center-tile.on {
+  background: @accent_bg_color;
+  color: @accent_fg_color;
+}
+.center-tile.on .tile-subtitle {
+  color: alpha(@accent_fg_color, 0.75);
+}
+.center-tile .tile-icon {
+  padding: 7px;
+  border-radius: 999px;
+  background: alpha(#ffffff, 0.08);
+}
+.center-tile.on .tile-icon {
+  background: alpha(#000000, 0.12);
+}
+.tile-title {
+  font-weight: 700;
+}
+.tile-subtitle {
+  font-size: 0.85em;
+  color: alpha(@window_fg_color, 0.6);
+}
+.tile-more {
+  min-width: 24px;
+  min-height: 24px;
+  padding: 0;
+  border-radius: 999px;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.center-group {
+  padding: 8px 10px;
+  border-radius: 18px;
+  background: alpha(#ffffff, 0.05);
+}
+.center-slider scale trough {
+  min-height: 22px;
+  border-radius: 999px;
+  background: alpha(#ffffff, 0.1);
+}
+.center-slider scale highlight {
+  border-radius: 999px;
+  background: @accent_color;
+}
+.center-slider scale slider {
+  min-width: 22px;
+  min-height: 22px;
+  margin: -2px;
+  background: #ffffff;
+  box-shadow: 0 1px 4px alpha(#000000, 0.4);
+}
+.slider-icon {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.power-button {
+  color: @window_fg_color;
+  -gtk-icon-size: 20px;
+  min-width: 46px;
+  min-height: 46px;
+  border-radius: 999px;
+  background: none;
+  border: none;
+  box-shadow: none;
+  transition: background-color 140ms ease;
+}
+.power-button:hover {
+  background: alpha(#ffffff, 0.1);
+}
+
+.network-list {
+  background: none;
+}
+.network-row {
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.network-row:hover {
+  background: alpha(#ffffff, 0.08);
+}

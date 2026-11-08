@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Jungey Files
+GenericName=File Manager
+Comment=Browse, organise and find your files
+Exec=@BIN@/jungey-files %U
+Icon=jungey-files
+Terminal=false
+Categories=System;FileTools;FileManager;GTK;
+MimeType=inode/directory;
+Keywords=folder;files;explorer;thunar;
+StartupNotify=true

@@ -1,0 +1,30 @@
+/* Jungey's notifications: navy glass, a reactor-cyan edge, the summary in cyan. */
+#XfceNotifyWindow {
+  background-color: rgba(5, 12, 20, 0.94);
+  border: 1px solid rgba(60, 200, 242, 0.45);
+  border-radius: 10px;
+  box-shadow: 0 0 24px rgba(60, 200, 242, 0.18);
+}
+#XfceNotifyWindow:hover {
+  border-color: #3cc8f2;
+}
+#XfceNotifyWindow label#summary {
+  color: #3cc8f2;
+  font-weight: 700;
+}
+#XfceNotifyWindow label#body {
+  color: #d8e6ee;
+}
+#XfceNotifyWindow button {
+  background-image: none;
+  background-color: rgba(60, 200, 242, 0.14);
+  border: 1px solid rgba(60, 200, 242, 0.35);
+  border-radius: 6px;
+  color: #d8f6ff;
+}
+#XfceNotifyWindow button:hover {
+  background-color: rgba(60, 200, 242, 0.28);
+}
+#XfceNotifyWindow progressbar progress {
+  background-color: #3cc8f2;
+}

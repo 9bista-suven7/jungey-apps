@@ -1,0 +1,9 @@
+[package]
+name = "jungey-ui"
+edition.workspace = true
+version.workspace = true
+license.workspace = true
+
+[dependencies]
+gtk.workspace = true
+adw.workspace = true

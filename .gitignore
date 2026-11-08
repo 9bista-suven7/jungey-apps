@@ -1,0 +1,16 @@
+# Rust build output
+/target
+
+# Third-party (cloned upstream) and local experiments — not part of this project
+/ace-step
+/music
+/backup
+
+# Python virtualenvs and caches
+.venv/
+__pycache__/
+*.pyc
+
+# Editor / OS cruft
+*.swp
+.DS_Store

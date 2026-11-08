@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Jungey Launchpad
+Comment=All your apps in a full-screen grid
+Exec=@BIN@/jungey-launchpad
+Icon=jungey-os
+Terminal=false
+NoDisplay=true

@@ -1,0 +1,90 @@
+/* Jungey Launchpad: a full-screen grid of apps over the blurred wallpaper. */
+
+window.jungey-launchpad {
+  background: @headerbar_bg_color;
+}
+
+.launchpad-dim {
+  background: alpha(@headerbar_bg_color, 0.42);
+}
+
+/* opening and closing are animated by the compositor (picom), not here: a CSS fade can
+   stall when the window first appears from the background */
+
+.launchpad-search {
+  min-height: 40px;
+  min-width: 380px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: alpha(#ffffff, 0.08);
+  border: 1px solid alpha(#ffffff, 0.12);
+  font-size: 1.05em;
+}
+.launchpad-search:focus-within {
+  border-color: alpha(@accent_color, 0.7);
+  box-shadow: 0 0 0 3px alpha(@accent_bg_color, 0.3);
+}
+
+.launchpad-tile {
+  border-radius: 24px;
+  padding: 14px 8px 10px;
+  background: none;
+  transition: background-color 140ms ease, transform 140ms ease;
+}
+.launchpad-tile:hover {
+  background: alpha(#ffffff, 0.08);
+}
+.launchpad-tile:focus-visible {
+  background: alpha(@accent_color, 0.16);
+  box-shadow: inset 0 0 0 2px alpha(@accent_color, 0.7);
+  outline: none;
+}
+.launchpad-tile:active {
+  transform: scale(0.95);
+}
+.launchpad-tile label {
+  color: @window_fg_color;
+  font-size: 0.78em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-shadow: 0 1px 3px alpha(#000000, 0.65);
+}
+
+.launchpad-note {
+  color: alpha(@window_fg_color, 0.6);
+  font-size: 1.1em;
+}
+
+.launchpad-switch {
+  padding: 4px;
+  border-radius: 999px;
+  background: alpha(#000000, 0.28);
+  border: 1px solid alpha(#ffffff, 0.08);
+}
+.launchpad-switch button {
+  border-radius: 999px;
+  padding: 6px 24px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: none;
+  color: alpha(@window_fg_color, 0.7);
+}
+.launchpad-switch button:checked {
+  background: @accent_bg_color;
+  color: @accent_fg_color;
+}
+
+.pager-dot {
+  min-width: 8px;
+  min-height: 8px;
+  padding: 0;
+  border-radius: 999px;
+  background: alpha(#ffffff, 0.3);
+  border: none;
+  box-shadow: none;
+  transition: background-color 200ms ease, min-width 200ms ease;
+}
+.pager-dot.active {
+  min-width: 22px;
+  background: @accent_color;
+}

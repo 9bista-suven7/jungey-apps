@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Jungey Tasks
+GenericName=Task Manager
+Comment=See what's running in plain words, and stop it
+Exec=@BIN@/jungey-tasks
+Icon=jungey-monitor
+Terminal=false
+Categories=System;Monitor;GTK;
+Keywords=task manager;tasks;process;processes;services;docker;stop;kill;memory;cpu;
+StartupNotify=true
